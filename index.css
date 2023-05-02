@@ -1,0 +1,41 @@
+.btn__wrap {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 60px;
+}
+
+.counter {
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 44px;
+  color: #000000;
+}
+
+.btn__start,
+.btn__reset {
+  display: block;
+  width: 500px;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 100px;
+  color: #ffffff;
+  border: none;
+  background: #4191ff;
+  border-radius: 20px;
+  cursor: pointer;
+}
+.btn__reset {
+  background: #f63030;
+}
+
+.btn__start:active{
+  background-color: #7daae9;
+  transform: translateY(3px);
+}
+
+.btn__reset:active {
+    background-color: #a93f3f;
+    transform: translateY(3px);
+}
