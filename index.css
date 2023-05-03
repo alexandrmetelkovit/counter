@@ -1,3 +1,7 @@
+body {
+  background: rgb(0, 152, 137);
+}
+
 .btn__wrap {
   display: flex;
   flex-direction: column;
@@ -6,11 +10,20 @@
   gap: 60px;
 }
 
-.counter {
+.counter__title {
+  margin: 0 auto;
   font-weight: 500;
   font-size: 32px;
   line-height: 44px;
-  color: #000000;
+  color: #e4e4ea;
+}
+
+.counter {
+  margin: 0 auto;
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 44px;
+  color: #eeff00;
 }
 
 .btn__start,
@@ -26,6 +39,7 @@
   border-radius: 20px;
   cursor: pointer;
 }
+
 .btn__reset {
   background: #f63030;
 }
