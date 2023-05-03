@@ -1,8 +1,14 @@
 body {
+  font-family: "Manrope", sans-serif;
   background: rgb(0, 152, 137);
 }
 
-.btn__wrap {
+.container {
+  width: 1150px;
+  margin: 0 auto;
+}
+
+.counter__wrap {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -12,14 +18,14 @@ body {
 
 .counter__title {
   margin: 0 auto;
+  text-align: center;
   font-weight: 500;
   font-size: 32px;
   line-height: 44px;
   color: #e4e4ea;
 }
 
-.counter {
-  margin: 0 auto;
+.counter__text {
   font-weight: 500;
   font-size: 32px;
   line-height: 44px;
@@ -28,6 +34,7 @@ body {
 
 .btn__start,
 .btn__reset {
+  font-family: inherit;
   display: block;
   width: 500px;
   font-weight: 700;
@@ -44,12 +51,36 @@ body {
   background: #f63030;
 }
 
-.btn__start:active{
+.btn__start:active {
   background-color: #7daae9;
   transform: translateY(3px);
 }
 
 .btn__reset:active {
-    background-color: #a93f3f;
-    transform: translateY(3px);
+  background-color: #a93f3f;
+  transform: translateY(3px);
+}
+
+@media (max-width: 767px) {
+  .container {
+    width: 100%;
+    padding: 0 17px;
+  }
+
+  .counter__title {
+    font-size: 25px;
+    line-height: 35px;
+  }
+
+  .counter__text {
+    font-size: 22px;
+    line-height: 30px;
+  }
+
+  .btn__start,
+  .btn__reset {
+    width: 100%;
+    font-size: 25px;
+    line-height: 110px;
+  }
 }
