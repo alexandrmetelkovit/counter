@@ -1,21 +1,25 @@
-let button = document.querySelector(".btn__start");
-let button2 = document.querySelector(".btn__reset");
-let counterText = document.querySelector(".counter");
+const counterEl = document.querySelector('[data-find="counterValue"]');
+const addOnePoolButton = document.getElementById("addOnePoolButton");
+const addFivePoolButton = document.getElementById("addFivePoolButton");
+const resetButton = document.getElementById("resetButton");
 
-let counter = 0;
+console.log(addOnePoolButton.dataset);
 
-button.addEventListener("click", function () {
-  counter = counter + 1;
+const COUNTER_INITIAL_VALUE = 0;
 
-  counterText.innerText = counter;
+let counter = COUNTER_INITIAL_VALUE;
+counterEl.innerText = counter;
+
+addOnePoolButton.addEventListener("click", function () {
+  counter = counter + parseInt(addOnePoolButton.dataset.pools);
+  counterEl.innerText = counter;
+});
+addFivePoolButton.addEventListener("click", function () {
+  counter = counter + parseInt(addFivePoolButton.dataset.pools);
+  counterEl.innerText = counter;
 });
 
-button2.addEventListener("click", function () {
-  counter = 0;
-  
-  counterText.innerText = counter;
+resetButton.addEventListener("click", function () {
+  counter = COUNTER_INITIAL_VALUE;
+  counterEl.innerText = counter;
 });
-
-// // DOM - Document Object Model - объектная модель документа
-
-// console.log(document);
