@@ -10,11 +10,6 @@ body {
   margin: 0 auto;
 }
 
-button {
-  font-family: inherit;
-  cursor: pointer;
-}
-
 .counter {
   margin: auto;
   width: 700px;
@@ -48,9 +43,11 @@ button {
   border-radius: 20px;
   border: none;
   background-color: rgb(123, 151, 207);
+  font-family: inherit;
   font-size: 32px;
   line-height: 44px;
   color: rgb(184, 211, 33);
+  cursor: pointer;
 }
 
 .counter__addButton:hover,
