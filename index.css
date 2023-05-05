@@ -1,5 +1,7 @@
 body {
   font-family: "Manrope", sans-serif;
+  font-weight: 700;
+  width: 100%;
   background: rgb(0, 152, 137);
 }
 
@@ -8,57 +10,56 @@ body {
   margin: 0 auto;
 }
 
-.counter__wrap {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 60px;
-}
-
-.counter__title {
-  margin: 0 auto;
-  text-align: center;
-  font-weight: 500;
-  font-size: 32px;
-  line-height: 44px;
-  color: #e4e4ea;
-}
-
-.counter {
-  font-weight: 500;
-  font-size: 32px;
-  line-height: 44px;
-  color: #eeff00;
-}
-
-.btn__start,
-.btn__reset {
+button {
   font-family: inherit;
-  display: block;
-  width: 500px;
-  font-weight: 700;
-  font-size: 32px;
-  line-height: 100px;
-  color: #ffffff;
-  border: none;
-  background: #4191ff;
-  border-radius: 20px;
   cursor: pointer;
 }
 
-.btn__reset {
-  background: #f63030;
+.counter {
+  margin: auto;
+  width: 700px;
+  padding: 100px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 36px;
 }
 
-.btn__start:active {
-  background-color: #7daae9;
-  transform: translateY(3px);
+.counter__title {
+  width: 100%;
+  text-align: center;
+  font-size: 35px;
+  line-height: 40px;
+  color: rgba(69, 255, 1, 0.804);
 }
 
-.btn__reset:active {
-  background-color: #a93f3f;
-  transform: translateY(3px);
+.counter__value {
+  text-align: center;
+  font-size: 25px;
+  line-height: 30px;
+  color: rgba(240, 252, 1, 0.804);
+}
+
+.counter__addButton,
+.counter__resetButton {
+  display: block;
+  width: 500px;
+  height: 100px;
+  border-radius: 20px;
+  border: none;
+  background-color: rgb(123, 151, 207);
+  font-size: 32px;
+  line-height: 44px;
+  color: rgb(184, 211, 33);
+}
+
+.counter__addButton:hover,
+.counter__resetButton:hover {
+  opacity: 0.7;
+}
+
+.counter__resetButton {
+  background-color: rgb(180, 38, 38);
 }
 
 @media (max-width: 767px) {
@@ -67,20 +68,24 @@ body {
     padding: 0 17px;
   }
 
-  .counter__title {
-    font-size: 25px;
-    line-height: 35px;
+  .counter {
+    gap: 40px;
   }
 
-  .counter {
-    font-size: 22px;
+  .counter__title {
+    font-size: 30px;
+    line-height: 26px;
+  }
+
+  .counter__value {
+    font-size: 25px;
     line-height: 30px;
   }
 
-  .btn__start,
-  .btn__reset {
-    width: 100%;
+  .counter__addButton,
+  .counter__resetButton {
+    width: 400px;
     font-size: 25px;
-    line-height: 110px;
+    line-height: 35px;
   }
 }
