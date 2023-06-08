@@ -23,3 +23,36 @@ resetButton.addEventListener("click", function () {
   counter = COUNTER_INITIAL_VALUE;
   counterEl.innerText = counter;
 });
+
+
+
+// let button = document.querySelector('button'); //обрабатываем нажатие кнопки
+// let counterText = document.querySelector('.counter__title'); // связь с эл на стр
+
+// let counter = 0; // создаем переменную / данные
+
+// button.addEventListener('click', function() { // обращаюсь к кнопке (button) => давай по этой кнопке обрабатывать событие (addEventListener)  добавь отработку действия => далее указываю, что я хочу обрабатывать по этой кнопке ('click')
+//   counter++;
+
+//   counterText.innerText = counter;
+// });
+
+
+// // console.log(document); // DOM - document object model
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
