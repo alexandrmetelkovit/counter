@@ -1,66 +1,50 @@
 body {
+  width: 100%;
   font-family: "Manrope", sans-serif;
   font-weight: 700;
-  width: 100%;
-  background: rgb(0, 152, 137);
 }
 
 .container {
+  margin: 0 auto;
   width: 1150px;
-  margin: 0 auto;
 }
 
-button {
-  font-family: inherit;
-  cursor: pointer;
-}
-
-.counter {
-  margin: 0 auto;
-  padding: 100px;
-  width: 700px;
+.counter__inner {
   display: flex;
-  justify-content: center;
   align-items: center;
   flex-direction: column;
   gap: 36px;
 }
 
 .counter__title {
-  text-align: center;
-  font-size: 35px;
-  line-height: 40px;
-  color: rgba(69, 255, 1, 0.804);
+  font-size: 32px;
 }
 
-.counter__value {
-  text-align: center;
-  font-size: 30px;
-  line-height: 35px;
-  color: rgba(240, 252, 1, 0.804);
-}
-
-.counter__addOneDayButton,
-.counter__addTwoDayButton,
-.counter__resetButton {
+.pressBtnOnePool,
+.pressBtnTwoPool,
+.pressReset {
+  font-family: inherit;
   width: 500px;
   height: 100px;
   border-radius: 20px;
+  background-color: #4191ff;
   border: none;
-  background-color: rgb(123, 151, 207);
-  font-size: 32px;
-  line-height: 44px;
-  color: rgb(184, 211, 33);
+  cursor: pointer;
 }
 
-.counter__addOneDayButton:hover,
-.counter__addTwoDayButton:hover,
-.counter__resetButton:hover {
+.pressReset {
+  background-color: #D45366;
+}
+
+.pressBtnOnePool:hover,
+.pressBtnTwoPool:hover,
+.pressReset:hover{
+  transition: 0.5s;
   opacity: 0.7;
 }
 
-.counter__resetButton {
-  background-color: rgb(180, 38, 38);
+.btn_title {
+  color: #FFF;
 }
 
 @media (max-width: 1199px) {
@@ -68,75 +52,52 @@ button {
     width: 100%;
     padding: 0 17px;
   }
-
-  .counter {
-    padding: 60px;
-  }
-
-  .counter__title {
-    font-size: 30px;
-    line-height: 35px;
-  }
-
-  .counter__value {
-    font-size: 30px;
-    line-height: 35px;
+  
+  .counter__inner {
+    gap: 40px;
   }
 }
 
-@media (max-width: 767px) {
+
+@media (max-width: 767px) { 
   .container {
     padding: 0 13px;
   }
 
-  .counter {
-    width: 100%;
-    gap: 50px;
+  .counter__inner {
+    gap: 36px;
   }
-
+  
   .counter__title {
-    font-size: 25px;
-    line-height: 30px;
+    font-size: 22px;
   }
-
-  .counter__value {
-    font-size: 25px;
-    line-height: 30px;
-  }
-
-  .counter__addButton,
-  .counter__resetButton {
+  
+  .pressBtnOnePool,
+  .pressBtnTwoPool,
+  .pressReset {
     width: 300px;
     height: 80px;
-    font-size: 25px;
-    line-height: 35px;
   }
 }
 
 @media (max-width: 575px) {
   .container {
-    padding: 7px;
-  }
+    padding: 0 10px;
 
-  .counter {
-    gap: 60px;
+  }
+  
+  .counter__inner {
+    gap: 22px;
   }
 
   .counter__title {
-    font-size: 25px;
-    line-height: 30px;
+    font-size: 18px;
   }
-
-  .counter__value {
-    font-size: 25px;
-    line-height: 30px;
-  }
-
-  .counter__addButton,
-  .counter__resetButton {
-    font-size: 25px;
-    line-height: 30px;
+  
+  .pressBtnOnePool,
+  .pressBtnTwoPool,
+  .pressReset {
+    width: 200px;
+    height: 60px;
   }
 }
-
-

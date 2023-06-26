@@ -1,25 +1,28 @@
-const counterNum = document.querySelector(".js-counter__value");
-const addOneDayButton = document.querySelector(".js-counter__addOneDayButton");
-const addOTwoDayButton = document.querySelector(".js-counter__addTwoDayButton");
-const resetButton = document.querySelector(".js-counter__resetButton");
+const pressBtnOnePool = document.querySelector(".js-pressBtnOnePool");
+const pressBtnTwoPool = document.querySelector(".js-pressBtnTwoPool");
+const pressReset = document.querySelector(".js-pressReset");
+const counterText = document.querySelector(".js-counter");
 
-const COUNTER_INITIAL_VALUE = 0;
+let counter = 0;
+const COUNTER_INITIAL_TEXT = counter;
 
-let counter = COUNTER_INITIAL_VALUE;
-
-counterNum.innerText = counter;
-
-addOneDayButton.addEventListener("click", function () {
+pressBtnOnePool.addEventListener("click", function () {
   counter++;
-  counterNum.innerText = counter;
+
+  counterText.innerText = counter;
 });
 
-addOTwoDayButton.addEventListener("click", function () {
+pressBtnTwoPool.addEventListener("click", function () {
   counter = counter + 2;
-  counterNum.innerText = counter;
+
+  counterText.innerText = counter;
 });
 
-resetButton.addEventListener("click", function () {
-  counter = COUNTER_INITIAL_VALUE;
-  counterNum.innerText = counter;
+pressReset.addEventListener("click", function () {
+  counter = COUNTER_INITIAL_TEXT;
+
+  counterText.innerText = COUNTER_INITIAL_TEXT;
 });
+
+// DOM  - Document Object Model
+// console.log(document)  // управление элементами на странице
